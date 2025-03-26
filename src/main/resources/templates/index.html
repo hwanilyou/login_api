@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a th:href="@{/login/naver}">naver login</a>
+<a th:href="@{/login}">통합</a>
+<a th:href="@{/user}">유저만 </a>
+
+
+<div th:if="${session.user != null}">
+  [[${session.user.email]],[[${session.user.name}]] <a th:href="@{/logout}"></a>
+</div>
+</body>
+</html>
